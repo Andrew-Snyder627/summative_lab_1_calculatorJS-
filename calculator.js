@@ -5,18 +5,21 @@ const calculationHistory = []
 function add(a, b) {
   const result = a + b;
   logCalculation(a, b, "+", result)
+  console.log(`Result: ${result}`)
   return result;
 }
 
 function subtract(a, b) {
   const result = a - b;
   logCalculation(a, b, "-", result)
+  console.log(`Result: ${result}`)
   return result;
 }
 
 function multiply(a, b) {
   const result = a * b;
   logCalculation(a, b, "*", result)
+  console.log(`Result: ${result}`)
   return result;
 }
 
@@ -27,6 +30,7 @@ function divide(a, b) {
   }
   const result = a / b;
   logCalculation(a, b, "/", result)
+  console.log(`Result: ${result}`)
   return result;
 }
 
