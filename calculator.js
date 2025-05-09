@@ -1,22 +1,22 @@
 // Global History Array
 const calculationHistory = []
 
-// Operation Function
+// Operation Functions
 function add(a, b) {
   const result = a + b;
-
+  logCalculation(a, b, "+", result)
   return result;
 }
 
 function subtract(a, b) {
   const result = a - b;
-
+  logCalculation(a, b, "-", result)
   return result;
 }
 
 function multiply(a, b) {
   const result = a * b;
-
+  logCalculation(a, b, "*", result)
   return result;
 }
 
@@ -26,7 +26,7 @@ function divide(a, b) {
     return null;
   }
   const result = a / b;
-
+  logCalculation(a, b, "/", result)
   return result;
 }
 
@@ -52,3 +52,10 @@ function showHistory() {
     console.log(`${index + 1}: ${calc.operand1} ${calc.operator} ${calc.operand2} = ${calc.result}`);
   });
 }
+
+add(10, 5);
+subtract(5, 2);
+multiply(2, 4);
+divide(18, 6);
+divide(10, 0);
+showHistory();
